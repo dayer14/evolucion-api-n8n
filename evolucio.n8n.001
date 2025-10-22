@@ -1,0 +1,13 @@
+# Usa la imagen oficial más reciente de Evolution API
+FROM atendai/evolution-api:latest
+
+# Define variables base para que Evolution API no falle
+ENV NODE_ENV=production
+ENV DB_CONNECTION=postgres
+ENV PORT=3000
+
+# Expón el puerto (Render lo detectará automáticamente)
+EXPOSE 3000
+
+# Comando de inicio (usa el script propio de Evolution API)
+CMD ["npm", "run", "start:docker"]
