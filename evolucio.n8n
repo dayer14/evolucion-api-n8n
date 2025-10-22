@@ -1,0 +1,11 @@
+# Usa la imagen oficial más reciente de Evolution API como base.
+# Puedes reemplazar 'latest' por una versión específica si lo prefieres (ej. :2.2.3)
+FROM atendai/evolution-api:latest
+
+# Expone el puerto por defecto de Evolution API.
+# Render lo detectará automáticamente, pero es una buena práctica incluirlo.
+EXPOSE 8080
+
+# El resto de la configuración, como la base de datos (PostgreSQL),
+# la API Key, y la URL de Redis, se maneja
+# mediante las Variables de Entorno en el panel de Render, NO en este Dockerfile.
